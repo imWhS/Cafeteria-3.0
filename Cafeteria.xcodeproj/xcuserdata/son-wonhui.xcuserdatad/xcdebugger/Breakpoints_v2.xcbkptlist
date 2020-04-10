@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "263A6EEA-E957-432D-B9E2-AC127D82934E"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5AC0D11E-31E4-4E9B-9D63-93A9FD98A59B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cafeteria/FloatingView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "FloatingView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5AC0D11E-31E4-4E9B-9D63-93A9FD98A59B - 724c61770289c603"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cafeteria.FloatingView.contentView.getter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "Cafeteria"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/son-wonhui/OneDrive%20-%20inu.ac.kr/Developments/Cafeteria/Cafeteria/FloatingView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "5AC0D11E-31E4-4E9B-9D63-93A9FD98A59B - 101c06b7d0dda10f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cafeteria.FloatingView.contentView.setter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "Cafeteria"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/son-wonhui/OneDrive%20-%20inu.ac.kr/Developments/Cafeteria/Cafeteria/FloatingView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "5AC0D11E-31E4-4E9B-9D63-93A9FD98A59B - 56ec2a68dd0a3ffc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cafeteria.FloatingView.contentView.modify : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "Cafeteria"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/son-wonhui/OneDrive%20-%20inu.ac.kr/Developments/Cafeteria/Cafeteria/FloatingView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "5AC0D11E-31E4-4E9B-9D63-93A9FD98A59B - 9db11a81527cff08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cafeteria.FloatingView.contentView.modify : Swift.Optional&lt;__C.UIView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Cafeteria"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/son-wonhui/OneDrive%20-%20inu.ac.kr/Developments/Cafeteria/Cafeteria/FloatingView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "551DF966-B63F-4905-AB86-D9E899A35AC5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cafeteria/MenuTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

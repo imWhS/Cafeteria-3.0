@@ -1,0 +1,19 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "v1.7.4",
+  "iOS" : [
+    {
+      "name" : "FloatingPanel",
+      "hash" : "f77e9254910ec5eb08040c7a9cde1d332e10d7a37c8f4cad6474644a813194c4",
+      "swiftToolchainVersion" : "5.2 (swiftlang-1103.0.32.1 clang-1103.0.32.29)"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="Cafeteria" customModuleProvider="target">
+            <connections>
+                <outlet property="bg" destination="8ra-wh-mT3" id="MrS-s2-SZ7"/>
+                <outlet property="menuList" destination="K9W-GL-FNT" id="f98-2G-1aN"/>
+                <outlet property="menuScrollView" destination="dV3-lI-YXf" id="Sy6-fp-y8z"/>
+                <outlet property="tableView_list" destination="MAF-7S-Kta" id="HbC-7D-nZE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="qbf-kk-yOS">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="507"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ra-wh-mT3">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제 1기숙사 식당" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehR-v9-xy4">
+                            <rect key="frame" x="19" y="16" width="221" height="39"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="221" id="jkI-U2-oP0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGw-G6-T1W">
+                            <rect key="frame" x="19" y="62" width="168" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="R5c-jn-f5c"/>
+                                <constraint firstAttribute="width" constant="168" id="uf2-kc-Ceb"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment>
+                                    <string key="content">조식 00:00 - 00:00 
+중식 00:00 - 00:00 
+석식 00:00 - 00:00</string>
+                                    <attributes>
+                                        <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <font key="NSFont" metaFont="message" size="11"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dV3-lI-YXf">
+                            <rect key="frame" x="19" y="116" width="376" height="780"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <viewLayoutGuide key="contentLayoutGuide" id="iNn-WL-VZl"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="fHG-Fg-RNj"/>
+                        </scrollView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="K9W-GL-FNT">
+                            <rect key="frame" x="13" y="116" width="227" height="152"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <string key="text">돈육청국장찌개*수제비사리
+생선까스*타르s
+감자채햄볶음
+미역줄기나물
+생선까스*타르s
+감자채햄볶음
+미역줄기나물
+깻잎지무침
+양배추샐러드*석류드레싱
+포기김치
+백미밥</string>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sww-aw-9IA">
+                            <rect key="frame" x="19" y="115" width="215" height="1"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="0.37395466550000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="5TL-LD-jNK"/>
+                                <constraint firstAttribute="width" constant="215" id="yX1-JJ-DwK"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuNotiBtn" translatesAutoresizingMaskIntoConstraints="NO" id="heE-bt-wrg">
+                            <rect key="frame" x="198" y="69" width="36" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="F6w-jq-B3m"/>
+                                <constraint firstAttribute="height" constant="36" id="PVo-4r-as3"/>
+                            </constraints>
+                        </imageView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MAF-7S-Kta">
+                            <rect key="frame" x="19" y="116" width="376" height="780"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="268" id="1n1-hq-nhx"/>
+                        <constraint firstItem="heE-bt-wrg" firstAttribute="leading" secondItem="rGw-G6-T1W" secondAttribute="trailing" constant="11" id="62S-h9-1ff"/>
+                        <constraint firstAttribute="width" constant="253" id="Aps-EP-HBq"/>
+                        <constraint firstItem="rGw-G6-T1W" firstAttribute="leading" secondItem="8ra-wh-mT3" secondAttribute="leading" constant="19" id="Jsk-WD-mKI"/>
+                        <constraint firstAttribute="trailing" secondItem="Sww-aw-9IA" secondAttribute="trailing" constant="19" id="PCF-jt-Jwk"/>
+                        <constraint firstItem="Sww-aw-9IA" firstAttribute="top" secondItem="ehR-v9-xy4" secondAttribute="bottom" constant="60" id="U30-vn-N2c"/>
+                        <constraint firstAttribute="trailing" secondItem="ehR-v9-xy4" secondAttribute="trailing" constant="13" id="a5Q-3y-tgV"/>
+                        <constraint firstItem="ehR-v9-xy4" firstAttribute="top" secondItem="8ra-wh-mT3" secondAttribute="top" constant="16" id="aY5-ak-G3Z"/>
+                        <constraint firstItem="Sww-aw-9IA" firstAttribute="leading" secondItem="8ra-wh-mT3" secondAttribute="leading" constant="19" id="ayJ-89-8LV"/>
+                        <constraint firstItem="K9W-GL-FNT" firstAttribute="top" secondItem="ehR-v9-xy4" secondAttribute="bottom" constant="61" id="ep3-bz-Ri3"/>
+                        <constraint firstAttribute="bottom" secondItem="K9W-GL-FNT" secondAttribute="bottom" id="hbI-eL-k0T"/>
+                        <constraint firstItem="ehR-v9-xy4" firstAttribute="leading" secondItem="8ra-wh-mT3" secondAttribute="leading" constant="19" id="k6B-No-euY"/>
+                        <constraint firstAttribute="trailing" secondItem="K9W-GL-FNT" secondAttribute="trailing" constant="13" id="ntw-5J-daa"/>
+                        <constraint firstItem="K9W-GL-FNT" firstAttribute="leading" secondItem="8ra-wh-mT3" secondAttribute="leading" constant="13" id="pbo-Md-Fs6"/>
+                        <constraint firstItem="heE-bt-wrg" firstAttribute="top" secondItem="ehR-v9-xy4" secondAttribute="bottom" constant="14" id="sHz-3y-PWn"/>
+                        <constraint firstAttribute="trailing" secondItem="heE-bt-wrg" secondAttribute="trailing" constant="19" id="wJ1-Cd-1Ys"/>
+                        <constraint firstItem="rGw-G6-T1W" firstAttribute="top" secondItem="ehR-v9-xy4" secondAttribute="bottom" constant="7" id="xb7-GT-4R8"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="pOc-jK-KrN"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="bHb-7Q-DlP"/>
+            <point key="canvasLocation" x="105.07246376811595" y="59.263392857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="menuNotiBtn" width="76.5" height="76.5"/>
+    </resources>
+</document>
