@@ -16,6 +16,8 @@ class IDView: UIView {
     @IBOutlet var search_account_btn: UIButton!
     @IBOutlet var desc_view: UIView!
     @IBOutlet var login_form_view: UIView!
+    @IBOutlet var errorLabel: UILabel!
+    @IBOutlet var linkPortal: UIButton!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -32,5 +34,9 @@ class IDView: UIView {
         view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: self.bounds.height)
         
         self.addSubview(view)
+    }
+    
+    @IBAction func touchedLoginBtn(_ sender: Any) {
+        print("touchedLoginBtn")
     }
 }

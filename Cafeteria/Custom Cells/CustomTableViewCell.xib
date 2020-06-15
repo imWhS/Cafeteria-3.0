@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="PEb-IL-ihq" customClass="CustomTableViewCell" customModule="Cafeteria" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="256" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PEb-IL-ihq" id="0sb-ei-mRa">
+                <rect key="frame" x="0.0" y="0.0" width="256" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qx7-r6-48n">
+                        <rect key="frame" x="0.0" y="29" width="256" height="41"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="720kcal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWM-0X-raF">
+                                <rect key="frame" x="85" y="0.0" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="￦ 3,400" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13x-ji-qDk">
+                                <rect key="frame" x="180" y="0.0" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" red="0.91764705879999997" green="0.29411764709999999" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="256" id="1s4-FP-xfJ"/>
+                            <constraint firstAttribute="height" constant="41" id="pFW-qf-tju"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucU-3m-zmN">
+                        <rect key="frame" x="0.0" y="0.0" width="256" height="21"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <string key="text">봄나물비빔밥*계란후라이
+시금치된장국
+동그랑땡케찹조림
+알마늘견과류조림
+무말랭이무침
+양상추샐러드*오렌지드레싱
+포기김치
+백미밥</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="qx7-r6-48n" secondAttribute="bottom" id="Gv1-uJ-7gl"/>
+                    <constraint firstItem="ucU-3m-zmN" firstAttribute="leading" secondItem="0sb-ei-mRa" secondAttribute="leading" id="JbX-Bx-HRU"/>
+                    <constraint firstItem="qx7-r6-48n" firstAttribute="top" secondItem="ucU-3m-zmN" secondAttribute="bottom" constant="8" id="WXd-kR-TBf"/>
+                    <constraint firstItem="ucU-3m-zmN" firstAttribute="top" secondItem="0sb-ei-mRa" secondAttribute="top" id="gEk-dc-VxR"/>
+                    <constraint firstAttribute="trailing" secondItem="ucU-3m-zmN" secondAttribute="trailing" id="id4-rU-dJj"/>
+                    <constraint firstAttribute="trailing" secondItem="qx7-r6-48n" secondAttribute="trailing" id="pPI-EJ-loJ"/>
+                    <constraint firstItem="qx7-r6-48n" firstAttribute="leading" secondItem="0sb-ei-mRa" secondAttribute="leading" id="pcQ-Sc-JLd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="kcal" destination="VWM-0X-raF" id="dYT-2F-Vm6"/>
+                <outlet property="price" destination="13x-ji-qDk" id="zlV-4I-kLf"/>
+                <outlet property="tlabel" destination="ucU-3m-zmN" id="rC3-Tk-Nj2"/>
+            </connections>
+            <point key="canvasLocation" x="-31.884057971014496" y="-13.392857142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -10,4 +10,6 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     @IBOutlet var tlabel: UILabel!
+    @IBOutlet var price: UILabel!
+    @IBOutlet var kcal: UILabel!
 }

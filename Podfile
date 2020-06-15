@@ -7,7 +7,10 @@ target 'Cafeteria' do
 
   use_frameworks!
   pod 'TextFieldEffects'
+  pod 'AlamofireObjectMapper', '~> 5.2.1'
+  pod 'SPAlert'
 
   # Pods for Cafeteria
+
 
 end
