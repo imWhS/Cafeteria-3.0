@@ -41,16 +41,58 @@ class FloatingViewController: UIViewController, UITextFieldDelegate {
         return model
     }()
     
+    @IBOutlet var tmpErrorView: NetworkConnectionErrorView2!
+    @IBOutlet var tmpErrorViewHeight: NSLayoutConstraint!
+    @IBOutlet var tmpErrorViewBottom: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 13.0, *) { overrideUserInterfaceStyle = .light }
         
+        let window = UIApplication.shared.windows[0]
+        let safeFrame = window.safeAreaLayoutGuide.layoutFrame
+        let topSafeAreaHeight = safeFrame.minY
+        let bottomSafeAreaHeight = window.frame.maxY - safeFrame.maxY
+        
+        let tmpErrorViewX = tmpErrorView.frame.maxX
+        let tmpErrorViewY = tmpErrorView.frame.maxY
+        
+        tmpErrorView.moveToPage.addTarget(self, action: #selector(pressed1), for: .touchUpInside)
+        
+        tmpErrorView.close.addTarget(self, action: #selector(pressed2), for: .touchUpInside)
+        
+        tmpErrorView.frame = CGRect(x: tmpErrorViewX, y: tmpErrorViewY, width: bottomView.frame.width, height: 300 + bottomSafeAreaHeight)
+        tmpErrorViewHeight.constant += bottomSafeAreaHeight
+        
+        tmpErrorView.bg.frame = CGRect(x: 0, y: 0, width: bottomView.frame.width, height: 300)
+    
         if userPreferences.isBarcode() {
             setBarcodeView()
         } else {
             setSignInView()
-        
         }
+    }
+    
+    @objc func pressed1() {
+        guard let url = URL(string: "https://cafeteria-barcode-generator.herokuapp.com") else { return }
+
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    @objc func pressed2() {
+        let window = UIApplication.shared.windows[0]
+        let safeFrame = window.safeAreaLayoutGuide.layoutFrame
+        let topSafeAreaHeight = safeFrame.minY
+        let bottomSafeAreaHeight = window.frame.maxY - safeFrame.maxY
+        
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+            self.tmpErrorViewBottom.constant += (300 + bottomSafeAreaHeight)
+            self.view.layoutIfNeeded()
+        }, completion: { _ in
+            self.tmpErrorView = nil
+        })
     }
     
     func setBarcodeView() {
@@ -83,7 +125,6 @@ class FloatingViewController: UIViewController, UITextFieldDelegate {
         
         IDV.id_field.textContentType = .username
         IDV.pw_field.delegate = self
-        IDV.linkPortal.addTarget(self, action: #selector(pressed), for: .touchUpInside)
         
         idTF = IDV.id_field
         pwTF = IDV.pw_field

@@ -352,12 +352,22 @@
                                     <constraint firstAttribute="width" constant="375" id="wLr-h2-tec"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tU5-jf-VAy" customClass="NetworkConnectionErrorView2" customModule="Cafeteria" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="427" width="375" height="240"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="RKO-i2-67E"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="d5E-vi-KEf" firstAttribute="leading" secondItem="ifm-hM-jdu" secondAttribute="leading" id="BFL-TP-8LL"/>
                             <constraint firstItem="d5E-vi-KEf" firstAttribute="top" secondItem="ifm-hM-jdu" secondAttribute="top" id="Csk-na-qj6"/>
+                            <constraint firstItem="tU5-jf-VAy" firstAttribute="leading" secondItem="Am3-Rn-DRX" secondAttribute="leading" id="DkU-Tx-frN"/>
+                            <constraint firstItem="tU5-jf-VAy" firstAttribute="trailing" secondItem="Am3-Rn-DRX" secondAttribute="trailing" id="DwT-q2-trI"/>
                             <constraint firstItem="d5E-vi-KEf" firstAttribute="trailing" secondItem="ifm-hM-jdu" secondAttribute="trailing" id="Kav-A6-zGZ"/>
+                            <constraint firstItem="tU5-jf-VAy" firstAttribute="bottom" secondItem="Am3-Rn-DRX" secondAttribute="bottom" id="eld-gZ-2g2"/>
                             <constraint firstItem="d5E-vi-KEf" firstAttribute="bottom" secondItem="ifm-hM-jdu" secondAttribute="bottom" id="fi3-Ab-yhF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ifm-hM-jdu"/>
@@ -366,6 +376,9 @@
                         <outlet property="bottomView" destination="L1b-NS-mE3" id="GFg-bz-5t8"/>
                         <outlet property="errorMsgLabel" destination="alF-Jz-rDl" id="ok5-et-tsV"/>
                         <outlet property="loginBtn" destination="hIy-DQ-wJE" id="jMo-rV-cj4"/>
+                        <outlet property="tmpErrorView" destination="tU5-jf-VAy" id="wPz-wd-FjO"/>
+                        <outlet property="tmpErrorViewBottom" destination="eld-gZ-2g2" id="fRN-Xh-Jze"/>
+                        <outlet property="tmpErrorViewHeight" destination="RKO-i2-67E" id="MyT-ZP-20C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWx-Y6-v9j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -376,11 +389,11 @@
         <scene sceneID="Rxw-Ue-xxi">
             <objects>
                 <viewController id="bOP-G4-zpv" customClass="InfoViewController" customModule="Cafeteria" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="k6Q-Xz-owW">
+                    <view key="view" contentMode="scaleToFill" id="k6Q-Xz-owW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YtP-0m-d6Z">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YtP-0m-d6Z">
                                 <rect key="frame" x="0.0" y="44" width="375" height="511"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qLo-M3-Ndt">
@@ -403,7 +416,7 @@
                                                 <color key="textColor" red="0.91764705879999997" green="0.29411764709999999" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beta Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ou-bR-Sha">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VERSION 3.0.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ou-bR-Sha">
                                                 <rect key="frame" x="29" y="63" width="173" height="15"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
@@ -434,11 +447,11 @@
                                     <constraint firstAttribute="width" constant="375" id="pGy-Ku-Tvi"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yGV-Rh-JvE">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGV-Rh-JvE">
                                 <rect key="frame" x="0.0" y="555" width="375" height="63"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGt-JV-Z8S" customClass="PMSuperButton" customModule="Cafeteria" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="14" width="274" height="34"/>
+                                        <rect key="frame" x="0.0" y="14" width="375" height="34"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -508,7 +521,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Laa-HU-5mB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2903" y="136"/>
+            <point key="canvasLocation" x="2901.5999999999999" y="135.38230884557723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rt3-OZ-PZU">

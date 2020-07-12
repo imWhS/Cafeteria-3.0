@@ -16,9 +16,10 @@ let header: HTTPHeaders = [ "Content-Type": "application/x-www-form-urlencoded" 
 
 let jsonheader: HTTPHeaders = [ "Content-Type": "application/json" ]
 
+var alamoFireManager : SessionManager?
+
 class NetworkModel {
-    
-    let BASE_URL = "https://api.inucafeteria.gq"
+    let BASE_URL = "http://cafeteria-main-lb-1293979949.ap-northeast-2.elb.amazonaws.com"
     
     //뷰컨트롤러로 데이터를 전달해줄 위임자를 나타내주는 변수
     
@@ -108,6 +109,7 @@ class NetworkModel {
         if self.isSuccess(statusCode: code) {
             self.view?.networkResult(resultData: item, code: name)
         } else {
+            
             self.view?.networkFailed(errorMsg: self.errorMsg(code: code), code: name)
         }
     }
@@ -123,31 +125,44 @@ class NetworkModel {
     
     func foodplan(date: Int) {
         print("foodplan() date: \(date)")
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 10
+        configuration.timeoutIntervalForResource = 10
+        
         
         Alamofire.request("\(BASE_URL)/menus?date=\(date)", encoding: URLEncoding.httpBody).responseJSON { res in
             guard let code = res.response?.statusCode else {
+                print("실패1")
                 self.view?.networkFailed(errorMsg: String.noServer, code: self._foodplan)
+                
                 return
             }
             
             switch res.result {
             case .success(let item):
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                print(item)
                 if self.isSuccess(statusCode: code) {
                     if let array = item as? NSArray {
+                        print("성공!")
                         self.view?.networkResult(resultData: array, code: self._foodplan)
                     }
                 } else {
+                    print("실패4")
                     self.view?.networkFailed(errorMsg: self.errorMsg(code: code), code: self._foodplan)
                 }
             case .failure(let error):
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 //log.error(error)
                 if let error = error as? String {
+                    print("실패2")
                     self.view?.networkFailed(errorMsg: error, code: self._foodplan)
+                    
                 } else {
+                    print("실패3")
                     self.view?.networkFailed(errorMsg: String.noServer, code: self._foodplan)
+                    
                 }
             }
         }

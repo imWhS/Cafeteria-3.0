@@ -24,6 +24,8 @@ class MainViewController: UIViewController, FloatingPanelControllerDelegate {
     var is_first = true
     var VC: UIViewController!
     
+    var tmpNoticeView = NetworkConnectionErrorView2()
+    
     var weeklyDates: [Int] = []
     let dateFormatter = DateFormatter()
     var dateToday: String = ""
@@ -35,11 +37,14 @@ class MainViewController: UIViewController, FloatingPanelControllerDelegate {
     var trestaurants = [[DataVO]]()
     var horizontalScrollView: ASHorizontalScrollView? = ASHorizontalScrollView()
     
+    var isNetworkFailed = false
+    
     private lazy var networkModel: NetworkModel = {
         return NetworkModel(self)
     }()
     
     var networkConnectionErrorView: NetworkConnectionErrorView?
+    var networkConnectionErrorView2: NetworkConnectionErrorView2?
     
     private var datas: [DataVO] = []
     
@@ -88,7 +93,13 @@ class MainViewController: UIViewController, FloatingPanelControllerDelegate {
         }
     }
     
-    @objc func pressed(sender: UIButton!) {
+    func showNetworkErrorPage() {
+        networkConnectionErrorView2 = NetworkConnectionErrorView2(frame: self.view.frame)
+        networkConnectionErrorView2!.moveToPage.addTarget(self, action: #selector(rechkServerConnection), for: .touchUpInside)
+        load_view_bg.addSubview(networkConnectionErrorView2!)
+    }
+    
+    @objc func rechkNetworkStatus(sender: UIButton!) {
         if connectedToNetwork == true {
             UIView.animate(withDuration: 0.5, animations: {
                 self.networkConnectionErrorView!.alpha = 0
@@ -96,6 +107,10 @@ class MainViewController: UIViewController, FloatingPanelControllerDelegate {
                 self.initApplication()
             })
         }
+    }
+    
+    @objc func rechkServerConnection(sender: UIButton!) {
+        self.networkModel.foodplan(date: weeklyDates[dayIdx])
     }
     
     override func viewDidLoad() {
@@ -110,7 +125,7 @@ class MainViewController: UIViewController, FloatingPanelControllerDelegate {
         
         if connectedToNetwork == false {
             networkConnectionErrorView = NetworkConnectionErrorView(frame: self.view.frame)
-            networkConnectionErrorView!.chkAgainBtn.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+            networkConnectionErrorView!.chkAgainBtn.addTarget(self, action: #selector(rechkNetworkStatus), for: .touchUpInside)
             load_view_bg.addSubview(networkConnectionErrorView!)
         } else {
             initApplication()
@@ -174,6 +189,7 @@ class MainViewController: UIViewController, FloatingPanelControllerDelegate {
             print("\n현재 실행 시점 기준으로 토요일이어서 금요일(\(weeklyDates[dayIdx - 1])) 식단표를 불러옵니다.")
             self.networkModel.foodplan(date: weeklyDates[dayIdx - 1])
         } else {
+            print("foodplan 서버 통신 시작")
             self.networkModel.foodplan(date: weeklyDates[dayIdx])
         }
     }
@@ -437,14 +453,18 @@ class MainViewController: UIViewController, FloatingPanelControllerDelegate {
                 let strRange2 = data.foods.index(data.foods.startIndex, offsetBy: 0) ..< data.foods.index(data.foods.startIndex, offsetBy: 5)
                 data.foods.removeSubrange(strRange2)
                 type2str = "\(type2str)1-1 코너"
-                //trestaurants[0].append(DataVO(type1: "", type2: "1-1 코너", calorie: -1, corner_id: -1, foods: "", price: -1))  //학생식당 1코너 카드에 추가
             }
             
             if data.foods.hasPrefix("<즉석조리기기>") {
                 let strRange2 = data.foods.index(data.foods.startIndex, offsetBy: 0) ..< data.foods.index(data.foods.startIndex, offsetBy: 9)
                 data.foods.removeSubrange(strRange2)
                 type2str = "\(type2str)2-2 코너 즉석 조리 기기"
-                //trestaurants[1].append(DataVO(type1: "", type2: "2-2 코너 즉석 조리 기기", calorie: -1, corner_id: -1, foods: "", price: -1))
+            }
+            
+            if data.foods.hasPrefix("셀프라면") {
+                let strRange2 = data.foods.index(data.foods.startIndex, offsetBy: 0) ..< data.foods.index(data.foods.startIndex, offsetBy: 5)
+                data.foods.removeSubrange(strRange2)
+                type2str = "\(type2str)셀프 라면 코너"
             }
             
             let catedata = DataVO(type1: type1str, type2: type2str, calorie: -1, corner_id: -1, foods: "", price: -1)
@@ -529,6 +549,15 @@ extension MainViewController {
     func floatingPanelWillBeginDragging(_ vc: FloatingPanelController) {
         self.view.becomeFirstResponder()
     }
+    
+    func floatingPanelDidChangePosition(_ vc: FloatingPanelController) {
+        if vc.position == .full {
+            let window = UIApplication.shared.windows[0]
+            let safeFrame = window.safeAreaLayoutGuide.layoutFrame
+            let topSafeAreaHeight = safeFrame.minY
+            let bottomSafeAreaHeight = window.frame.maxY - safeFrame.maxY
+        }
+    }
 }
 
 class MyFloatingPanelLayout: FloatingPanelLayout {
@@ -560,13 +589,14 @@ class MyFloatingPanelLayout: FloatingPanelLayout {
 extension MainViewController: NetworkCallback {
     func networkResult(resultData: Any, code: String) {
         if code == networkModel._foodplan {
+            
             if let result = resultData as? NSArray {
                 var temp2: [DataVO] = []
                 for item in result {
                     if let data = item as? NSDictionary {
                         let calorie = Int(data["calorie"] as? String ?? "0") ?? 0
                         let corner_id = data["corner-id"] as? Int ?? 0
-                        let foods = (data["foods"] as? String ?? "_").replacingOccurrences(of: " ", with: "\n").replacingOccurrences(of: "*", with: " 및 ")
+                        let foods = (data["foods"] as? String ?? "_").replacingOccurrences(of: " ", with: "\n").replacingOccurrences(of: "*", with: " 및 ").replacingOccurrences(of: "D", with: "드레싱").replacingOccurrences(of: "신라면진라면안성탕면", with: "신라면\n진라면\n안성탕면").replacingOccurrences(of: "야채라면너구리", with: "야채라면\n너구리").replacingOccurrences(of: "짜파게티즉석라볶이", with: "짜파게티\n즉석 라볶이").replacingOccurrences(of: "(신라면너구리짜파게티)", with: "신라면\n너구리\n짜파게티").replacingOccurrences(of: "+토핑", with: "셀프 라면 토핑")
                         let price = Int(data["price"] as? String ?? "0") ?? 0
                         let obj2 = DataVO(type1: "", type2: "", calorie: calorie, corner_id: corner_id, foods: foods, price: price)
                         temp2.append(obj2)
@@ -575,12 +605,13 @@ extension MainViewController: NetworkCallback {
                 datas = temp2
                 classifyDatas(datas: temp2)
             }
+        
             initSubViews()
         }
     }
     
     func networkFailed(errorMsg: String, code: String) {
-        NSLog("Failed! 1")
+        NSLog("Failed! 1: \(errorMsg)")
     }
     
     func networkFailed() {

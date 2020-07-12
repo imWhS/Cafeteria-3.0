@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0B02F324ADA65400C3CDC6 /* NetworkConnectionErrorView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0B02F124ADA65300C3CDC6 /* NetworkConnectionErrorView2.swift */; };
+		7B0B02F424ADA65400C3CDC6 /* NetworkConnectionErrorView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B0B02F224ADA65400C3CDC6 /* NetworkConnectionErrorView2.xib */; };
+		7B0B02F624ADAC8700C3CDC6 /* BarcodeErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0B02F524ADAC8700C3CDC6 /* BarcodeErrorViewController.swift */; };
+		7B0B02F924ADB44300C3CDC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B0B02F724ADB44300C3CDC6 /* Main.storyboard */; };
 		7B12BD2B2439CA1C00AE8FB9 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12BD2A2439CA1C00AE8FB9 /* CustomView.swift */; };
 		7B12BD2D2439CA3800AE8FB9 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B12BD2C2439CA3800AE8FB9 /* CustomView.xib */; };
 		7B12BD2F2439CA6900AE8FB9 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B12BD2E2439CA6900AE8FB9 /* CustomTableViewCell.xib */; };
@@ -42,7 +46,6 @@
 		7BB49701242C89AD007EF5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB49700242C89AD007EF5CB /* AppDelegate.swift */; };
 		7BB49703242C89AD007EF5CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB49702242C89AD007EF5CB /* SceneDelegate.swift */; };
 		7BB49705242C89AD007EF5CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB49704242C89AD007EF5CB /* MainViewController.swift */; };
-		7BB49708242C89AD007EF5CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB49706242C89AD007EF5CB /* Main.storyboard */; };
 		7BB4970B242C89AD007EF5CB /* Cafeteria.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BB49709242C89AD007EF5CB /* Cafeteria.xcdatamodeld */; };
 		7BB49710242C89B4007EF5CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB4970E242C89B4007EF5CB /* LaunchScreen.storyboard */; };
 		7BB49718242C8B9F007EF5CB /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BB49717242C8B9F007EF5CB /* Rubik-Medium.ttf */; };
@@ -71,6 +74,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B0B02F124ADA65300C3CDC6 /* NetworkConnectionErrorView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnectionErrorView2.swift; sourceTree = "<group>"; };
+		7B0B02F224ADA65400C3CDC6 /* NetworkConnectionErrorView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkConnectionErrorView2.xib; sourceTree = "<group>"; };
+		7B0B02F524ADAC8700C3CDC6 /* BarcodeErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeErrorViewController.swift; sourceTree = "<group>"; };
+		7B0B02F824ADB44300C3CDC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B12BD2A2439CA1C00AE8FB9 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomView.swift; path = ../CustomView.swift; sourceTree = "<group>"; };
 		7B12BD2C2439CA3800AE8FB9 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomView.xib; path = ../CustomView.xib; sourceTree = "<group>"; };
 		7B12BD2E2439CA6900AE8FB9 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
@@ -107,7 +114,6 @@
 		7BB49700242C89AD007EF5CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BB49702242C89AD007EF5CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7BB49704242C89AD007EF5CB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		7BB49707242C89AD007EF5CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BB4970A242C89AD007EF5CB /* Cafeteria.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cafeteria.xcdatamodel; sourceTree = "<group>"; };
 		7BB4970F242C89B4007EF5CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BB49711242C89B4007EF5CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 				7BBF62C42434F9A700921EC7 /* FloatingViewContoller.swift */,
 				7BB49704242C89AD007EF5CB /* MainViewController.swift */,
 				7BAD8990244DEA2B00914FAA /* InfoViewController.swift */,
+				7B0B02F524ADAC8700C3CDC6 /* BarcodeErrorViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -170,6 +177,8 @@
 				7B335C8D243AF15400818303 /* Custom Cells */,
 				7B151F3F24332D3700232819 /* IDView.xib */,
 				7B151F4124332F7000232819 /* IDView.swift */,
+				7B0B02F124ADA65300C3CDC6 /* NetworkConnectionErrorView2.swift */,
+				7B0B02F224ADA65400C3CDC6 /* NetworkConnectionErrorView2.xib */,
 				7BA895C72495F0270022BE13 /* NetworkConnectionErrorView.swift */,
 				7BA895C62495F0270022BE13 /* NetworkConnectionErrorView.xib */,
 				7BA895CA249607B80022BE13 /* BarcodeViewSE.swift */,
@@ -187,7 +196,7 @@
 		7B314BA12445C5F200C7149E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				7BB49706242C89AD007EF5CB /* Main.storyboard */,
+				7B0B02F724ADB44300C3CDC6 /* Main.storyboard */,
 				7BB4970E242C89B4007EF5CB /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
@@ -297,9 +306,9 @@
 		7BBF62C62435BB0D00921EC7 /* Frameworks_view */ = {
 			isa = PBXGroup;
 			children = (
-				7BC5764F243469C000378888 /* TextFieldEffects.swift */,
 				7BBF62C22434F2A300921EC7 /* PMSuperButton.swift */,
 				7BC5764D2434697500378888 /* HoshiTextField.swift */,
+				7BC5764F243469C000378888 /* TextFieldEffects.swift */,
 			);
 			path = Frameworks_view;
 			sourceTree = "<group>";
@@ -316,7 +325,8 @@
 				7BB496FA242C89AD007EF5CB /* Frameworks */,
 				7BB496FB242C89AD007EF5CB /* Resources */,
 				7BFC4BC0242DEF1400F4D9D4 /* Embed Frameworks */,
-				2626072BBF3BE8554847B010 /* [CP] Embed Pods Frameworks */,
+				7BA5372C249B4173008144D1 /* ShellScript */,
+				5A1CB149096C3EF705D24E84 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -371,9 +381,10 @@
 				7BB49710242C89B4007EF5CB /* LaunchScreen.storyboard in Resources */,
 				7B12BD2F2439CA6900AE8FB9 /* CustomTableViewCell.xib in Resources */,
 				7B12BD2D2439CA3800AE8FB9 /* CustomView.xib in Resources */,
+				7B0B02F924ADB44300C3CDC6 /* Main.storyboard in Resources */,
+				7B0B02F424ADA65400C3CDC6 /* NetworkConnectionErrorView2.xib in Resources */,
 				7B662FCC244D77EE007B9B6D /* CustomTableViewCell3.xib in Resources */,
 				7BA895CD249607B90022BE13 /* BarcodeViewSE.xib in Resources */,
-				7BB49708242C89AD007EF5CB /* Main.storyboard in Resources */,
 				7BB49718242C8B9F007EF5CB /* Rubik-Medium.ttf in Resources */,
 				7B29B7F2244ECAA50005B891 /* CustomView3.xib in Resources */,
 				7B3B6C8B2494DD6D005EE9B9 /* Screen Shot 2020-06-13 at 7.09.25 PM.png in Resources */,
@@ -385,7 +396,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2626072BBF3BE8554847B010 /* [CP] Embed Pods Frameworks */ = {
+		5A1CB149096C3EF705D24E84 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -424,6 +435,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7BA5372C249B4173008144D1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# skip if we run in debug\nif [ \"$CONFIGURATION\" == \"Debug\" ]; then\necho \"Skip frameworks cleaning in debug version\"\nexit 0\nfi\n\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name 'FloatingPanel.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -431,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B0B02F324ADA65400C3CDC6 /* NetworkConnectionErrorView2.swift in Sources */,
 				7B64DA3F2494B70A00C80562 /* KerningLabel.swift in Sources */,
 				7BBF62C32434F2A300921EC7 /* PMSuperButton.swift in Sources */,
 				7BBF62C52434F9A700921EC7 /* FloatingViewContoller.swift in Sources */,
@@ -438,6 +467,7 @@
 				7B76CFE42445C83A00BDC737 /* Network.swift in Sources */,
 				7BA895CC249607B90022BE13 /* BarcodeViewSE.swift in Sources */,
 				7B76CFEE2445CB0B00BDC737 /* LoginObject.swift in Sources */,
+				7B0B02F624ADAC8700C3CDC6 /* BarcodeErrorViewController.swift in Sources */,
 				7BB49705242C89AD007EF5CB /* MainViewController.swift in Sources */,
 				7B314BA72445C6F900C7149E /* NetworkModel.swift in Sources */,
 				7B17DE82244AF57D00BEC18E /* DataVO.swift in Sources */,
@@ -467,10 +497,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7BB49706242C89AD007EF5CB /* Main.storyboard */ = {
+		7B0B02F724ADB44300C3CDC6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7BB49707242C89AD007EF5CB /* Base */,
+				7B0B02F824ADB44300C3CDC6 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -607,7 +637,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 655LUR5Q5L;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = AANGG4Q668;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -618,10 +649,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.devwhs.Cafeteria;
+				MARKETING_VERSION = 3.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "appcenter.inu.ac.kr.inu-cafeteria";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -632,7 +664,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 655LUR5Q5L;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = AANGG4Q668;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -643,10 +676,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.devwhs.Cafeteria;
+				MARKETING_VERSION = 3.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "appcenter.inu.ac.kr.inu-cafeteria";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
