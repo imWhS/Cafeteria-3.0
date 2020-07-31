@@ -16,9 +16,9 @@ App Store 링크: https://apps.apple.com/kr/app/inu-카페테리아/id1272600111
 ## 사용 라이브러리
 * [PMSuperButton](https://github.com/pmusolino/PMSuperButton)  
     주요 UIButton 터치 시 물리적으로 눌리는(작아졌다가 커지는) 효과를 빠르게 구현하기 위해 사용했습니다.  
-    8월 초까지 직접 구현 예정 목표  
+    *8월 초까지 직접 구현 예정 목표*  
 * [TextfieldEffects](https://github.com/raulriera/TextFieldEffects)  
     학생 인증 바코드 활성화를 위해 아이디, 비밀번호 입력 시 UITextField의 선택된 효과를 빠르게 구현하기 위해 사용했습니다.  
-    8월 초까지 직접 구현 예정 목표  
+    *8월 초까지 직접 구현 예정 목표*  
 * [AppStoreStyleHorizontalScrollView](https://github.com/terenceLuffy/AppStoreStyleHorizontalScrollView)  
     교내 학생 식당 관련 정보를 제공하는 카드 형태의 custom UIView 여러 개를 좌, 우로 하나씩 넘겨볼 수 있도록 구현하기 위해 사용했습니다.  
