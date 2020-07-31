@@ -14,8 +14,8 @@
             filePath = "Cafeteria/NetworkModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "get(function:params:)"
             landmarkType = "7">
          </BreakpointContent>
